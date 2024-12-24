@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+{% load static %}
+{% load plotly_dash %}
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"  href="{% static '/css/outer.css' %}">
+    <link rel="stylesheet"  href="{% static '/css/freestyle.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.js"></script>
+    <title>Django by Janice | {% block title %} {% endblock title %}</title> <!-- 設定固定title格式 -->
+</head>
+
+
+
+
+ <div class="StickyHeader">
+   <div class="sky_blue">
+   <div class="container">
+    <header class="top-navigation d-flex flex-wrap justify-content-center py-3 mb-4 ">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <!-- <svg class="bi me-2" width="40" height="32"><img width="40" height="32" src="{% static 'images/優點.png' %}" alt=""></svg>-->
+            <span class="fs-4 　fw-bolder" style="color:#FFFFFF" >&nbspData Analyzing&nbsp&nbsp</span> <!--  fs 快速的改變文字的 font-size  ; &nbsp 不換行空格-->
+          </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link px-４ text-white" aria-current="page">Home</a></li>
+
+        <li class="nav-item"><a href="#" class="nav-link px-４ text-white">About</a></li>
+
+      </ul>
+    </header>
+
+</div>
+</div></div>
+
+    <body class="wheat">
+
+        <div class="container mb-3 mt-3 pb-4  ">
+
+            {% block content %} <!--block  與  endblock  之間是可以給子模板自己去定義的-->
+            {% endblock content %}
+
+        </div>
+
+    </body>
+</html>

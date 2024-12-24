@@ -1,0 +1,68 @@
+## 物價變數 ## 
+# 基本物價:
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A030101015&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=100000000000000000000000000000000000000000000000000000000000000000000000000000000&compmode=0&
+# 進口物價(美元):
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A030301015&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=10000000000000000000000000000000000000000000000000000000000000000000&compmode=0&
+# 進口物價(台幣):
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A030302015&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=10000000000000000000000000000000000000000000000000000000000000000000&compmode=0&
+# 出口物價(美元): 
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A030401015&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=100000000000000000000000000000000000000000000000000000&compmode=0&
+# 出口物價(台幣): 
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A030402015&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=100000000000000000000000000000000000000000000000000000&compmode=0&
+# 營造工程物價:
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A030501015&outmode=8&ym'+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=10000000000000000000000000000&compmode=0&
+# 生產者物價基本分類指數:(樣本數太少先忽略)
+# https://nstatdb.dgbas.gov.tw/dgbasAll/webMain.aspx?sys=220&funid=A030701015&outmode=8&ym'+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=01000000000000010010000000000000000000000000000000000000000000000000000000000000000000000000000001000&compmode=0&
+
+
+## 工業變數 ## 
+# 工業生產指數
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A050104010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=1000000000&compmode=0&
+# 外銷訂單按主要接單地區
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A050105010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=1&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=01&codlst0=011111&compmode=0&
+# 外銷訂單按主要接單貨品
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A050106010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=1&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=010&codlst0=011111111110&compmode=0&
+# 批發零售及餐飲業營業額
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A050107020&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=0111&compmode=0&
+
+
+## 勞工變數 ## 
+# 人力資源主要指標_失業率
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A040107010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=1&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=000000000001&codlst0=100&compmode=0&
+# 每人每月總薪資_工業與服務兩部門
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A046201010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=1&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=0100000000000000000000000000000001000000000000&codlst0=100&compmode=0&
+
+
+## 貨幣變數 ##
+# 貨幣總計數 m1b、m2
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A090501010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=1&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=01&codlst0=000000000000101&compmode=0&
+# 貨幣市場利率
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A093006010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=100000000000000000&compmode=0&
+# 美元即期匯率-銀行間收盤匯率-日平均(新臺幣元)
+https://nstatdb.dgbas.gov.tw/dgbasAll/webMain.aspx?sys=220&funid=A093201010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=00010&compmode=0&
+
+
+## 股價變數 ##
+# 集中市場證券總成交值概況
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A110201010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=100000000&compmode=0&
+# 集中市場股票交易概況
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A110203010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=110000&compmode=0&
+
+
+## 貿易 ##
+# 進出口貿易總值(美元)
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A081201010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=4&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=01&codlst0=11&compmode=0&
+# 進出口貿易總值(台幣)
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A081201010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=4&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=10&codlst0=11&compmode=0&
+
+## 交通運輸 ##
+# 航空客、貨運
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A070106020&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=00010&compmode=0&
+# 各國際商港貨物吞吐量
+https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A070105020&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=1&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=100&codlst0=01111111&compmode=0&
+# 國人出國人口
+# https://nstatdb.dgbas.gov.tw/dgbasall/webMain.aspx?sys=220&funid=A070107020&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=100000&compmode=0&
+
+## 景氣指標統計 ##
+https://nstatdb.dgbas.gov.tw/dgbasAll/webMain.aspx?sys=220&funid=A120101010&outmode=8&ym='+oldest_date+'&ymt='+latest_date+'&cycle=1&outkind=11&compmode=0&ratenm=%u7D71%u8A08%u503C&fldlst=11111&compmode=0&
+

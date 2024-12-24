@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d4c1527c-ddc9-4a7a-a016-8a2fb9b2488a" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/Forecast_only/DjangoProject" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2F71y8J9SwmfFSEMAO0yp9pw4dU" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.manage.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/janice/Dropbox/aws 亞馬遜 雲端服務/pythonProject&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\s7108\Dropbox\aws 亞馬遜 雲端服務\pythonProject\Forecast_only\forecast_e1\templates\forecast_e1" />
+      <recent name="C:\Users\s7108\Dropbox\aws 亞馬遜 雲端服務\pythonProject\Forecast_only\templates" />
+      <recent name="C:\Users\s7108\Dropbox\pythonProject\Forecast_only\forecast_e1\templates\forecast_e1" />
+      <recent name="C:\Users\s7108\OneDrive\桌面" />
+      <recent name="C:\Users\s7108\Dropbox\pythonProject\Forecast_only\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\s7108\Dropbox\pythonProject\Forecast_only\forecast_e1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.manage">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="runserver" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="manage" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Forecast_only" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Forecast_only/manage.py" />
+      <option name="PARAMETERS" value="runserver 0.0.0.0:7186" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="true" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python.manage" />
+    </list>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-50da183f06c8-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13135.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d4c1527c-ddc9-4a7a-a016-8a2fb9b2488a" name="Changes" comment="" />
+      <created>1663828560202</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663828560202</updated>
+      <workItem from="1684821786728" duration="6938000" />
+      <workItem from="1684896379990" duration="24960000" />
+      <workItem from="1684994714799" duration="26969000" />
+      <workItem from="1685080505324" duration="7533000" />
+      <workItem from="1685330591579" duration="41829000" />
+      <workItem from="1685686948946" duration="15000" />
+      <workItem from="1685688266944" duration="5137000" />
+      <workItem from="1685765147000" duration="1383000" />
+      <workItem from="1685857220880" duration="126000" />
+      <workItem from="1686208385902" duration="5300000" />
+      <workItem from="1686290259902" duration="2573000" />
+      <workItem from="1686454294282" duration="61648000" />
+      <workItem from="1686568639833" duration="13157000" />
+      <workItem from="1686582363073" duration="2676000" />
+      <workItem from="1686586555405" duration="9526000" />
+      <workItem from="1686622508063" duration="22837000" />
+      <workItem from="1686657579559" duration="16145000" />
+      <workItem from="1686709340594" duration="34400000" />
+      <workItem from="1686757075967" duration="5711000" />
+      <workItem from="1686792838132" duration="19934000" />
+      <workItem from="1686822804424" duration="1395000" />
+      <workItem from="1686831206696" duration="2565000" />
+      <workItem from="1686834526526" duration="9843000" />
+      <workItem from="1686852305812" duration="7752000" />
+      <workItem from="1686878552218" duration="951000" />
+      <workItem from="1686879531314" duration="1275000" />
+      <workItem from="1686892529726" duration="1347000" />
+      <workItem from="1686895984324" duration="2242000" />
+      <workItem from="1686901914202" duration="452000" />
+      <workItem from="1687326537479" duration="1191000" />
+      <workItem from="1687758404365" duration="4972000" />
+      <workItem from="1687846855769" duration="7884000" />
+      <workItem from="1687923188188" duration="6578000" />
+      <workItem from="1688017457683" duration="3249000" />
+      <workItem from="1688107192740" duration="3113000" />
+      <workItem from="1688302644320" duration="598000" />
+      <workItem from="1688445364647" duration="3929000" />
+      <workItem from="1688542199076" duration="4128000" />
+      <workItem from="1689140941772" duration="1722000" />
+      <workItem from="1689562982186" duration="1791000" />
+      <workItem from="1689817276951" duration="596000" />
+      <workItem from="1690173744764" duration="5095000" />
+      <workItem from="1690206312029" duration="1095000" />
+      <workItem from="1690852700271" duration="1394000" />
+      <workItem from="1696255029979" duration="1779000" />
+      <workItem from="1701059219552" duration="54708000" />
+      <workItem from="1701283184269" duration="142000" />
+      <workItem from="1701315560289" duration="1453000" />
+      <workItem from="1701434114666" duration="8958000" />
+      <workItem from="1701444259636" duration="2999000" />
+      <workItem from="1701653700731" duration="1066000" />
+      <workItem from="1701659814296" duration="5078000" />
+      <workItem from="1701755430289" duration="1847000" />
+      <workItem from="1701816793201" duration="2688000" />
+      <workItem from="1701928004132" duration="4938000" />
+      <workItem from="1702344856130" duration="12831000" />
+      <workItem from="1702438320908" duration="2540000" />
+      <workItem from="1702856795110" duration="1233000" />
+      <workItem from="1702955404343" duration="2937000" />
+      <workItem from="1702965116874" duration="15338000" />
+      <workItem from="1703038206502" duration="865000" />
+      <workItem from="1703040398168" duration="3441000" />
+      <workItem from="1703044210059" duration="6445000" />
+      <workItem from="1703055388374" duration="4051000" />
+      <workItem from="1703126825698" duration="1119000" />
+      <workItem from="1703129196531" duration="16095000" />
+      <workItem from="1703466175918" duration="2752000" />
+      <workItem from="1703569032144" duration="1421000" />
+      <workItem from="1703663751944" duration="756000" />
+      <workItem from="1704159169697" duration="600000" />
+      <workItem from="1704424803822" duration="207000" />
+      <workItem from="1704701359879" duration="776000" />
+      <workItem from="1704780387232" duration="325000" />
+      <workItem from="1704803841069" duration="217000" />
+      <workItem from="1705289512497" duration="9871000" />
+      <workItem from="1705311285901" duration="3165000" />
+      <workItem from="1705455622961" duration="958000" />
+      <workItem from="1705470409311" duration="327000" />
+      <workItem from="1705546230385" duration="9000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/views.py</url>
+          <line>44</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/urls.py</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/forms.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/views.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/forms.py</url>
+          <line>90</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/views.py</url>
+          <line>24</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/views.py</url>
+          <line>1001</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/urls.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/funs_class.py</url>
+          <line>428</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/funs_class.py</url>
+          <line>127</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/funs_class.py</url>
+          <line>172</line>
+          <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/views.py</url>
+          <line>985</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/ieas_funs.py</url>
+          <line>779</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/ieas_funs.py</url>
+          <line>940</line>
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/views.py</url>
+          <line>1929</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Forecast_only/forecast_e1/views.py</url>
+          <line>918</line>
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/pythonProject$manage.coverage" NAME="manage 覆盖结果" MODIFIED="1703150144090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Forecast_only" />
+  </component>
+</project>

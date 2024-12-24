@@ -1,0 +1,69 @@
+{% extends 'base1.html' %} {# 啟用父模板，繼承的概念 #}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load plotly_dash %}
+<head>
+<meta  charset = "utf-8" >
+<meta  name = "viewport"  content = "width=device-width, initial-scale=1, shrink-to-fit=no" >
+<!-- 上述meta標籤*必須*放在最前面，任何其他內容都*必須*跟隨其後！-->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.css' %}">
+<link  rel = "stylesheet" href = "{% static 'login/css/login.css' %}"  />
+<link rel="stylesheet"  href="{% static '/css/freestyle.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+<script src="{% static 'djangoSimpleCaptcha.js' %}"></script>
+{% block title %}
+登入
+{% endblock title %}  <!-- 配上 base 定義的固定 title 格式 -->
+
+
+     </head>
+{% block content %}
+<div class=" d-flex justify-content-center">
+        <div class="alert alert-success" role="alert">
+
+ <div class="col">
+                <form class="form-login" action="" method="post">
+                                     <h1 class="f02 fw-light fw-normal" >
+                               <svg class="py-2" width="40" height="40" fill="#3f87a6"><use xlink:href="#Flag fill"></use></svg>
+                     經濟預測分析網站</h1>
+                <br>
+
+
+
+
+                {% if login_form.captcha.errors %} <!-- 驗證碼錯誤提示 -->
+                    <div class="alert alert-warning">{{ login_form.captcha.errors }}</div>
+                {% elif message %}
+                    <div class="alert alert-warning">{{ message }}</div>
+                {% endif %}
+
+                  {% csrf_token %}
+                  <h3 class="text-center">請先登入</h3>
+
+                  <div class="form-group">
+                    {{ login_form.username.label_tag }}
+                    {{ login_form.username}}
+                  </div>
+
+                  <div class="form-group">
+                    {{ login_form.password.label_tag }}
+                    {{ login_form.password }}
+                  </div>
+<br>
+                  <div class="form-group">
+                    {{ login_form.captcha.label_tag }}
+                    {{ login_form.captcha }}
+
+
+
+                  </div>
+<br>
+                  <div>
+    <input class="btn btn-success btn-primary  w-100 py-2" type="submit" value="登入" />
+                  </div>
+                </form>
+            </div>
+</div></div>
+
+{% endblock content %}

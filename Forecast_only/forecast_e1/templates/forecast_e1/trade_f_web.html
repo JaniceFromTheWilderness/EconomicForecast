@@ -1,0 +1,134 @@
+{% extends 'base1_2_2.html' %} {# 啟用父模板，繼承的概念 #}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load plotly_dash %}
+<head>
+<link rel="stylesheet"  href="{% static '/css/freestyle.css' %}">
+{% block title %}
+進出口預測
+{% endblock title %}  <!-- 配上 base 定義的固定 title 格式 -->
+    </head>
+{% block content %}
+    <div class="center">
+
+            <div class=" d-flex justify-content-center">
+                 <h1 class="f02 fw-light " >{{ text_title }}</h1>
+            </div>
+            <br>
+            <br>
+
+        <div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">預測台灣的進口與出口</h4>
+          <p>此部分結合了 Python 網路爬蟲取得台灣主計總處與 Fred 美聯儲之資料，並進行預測之估計。</p>
+            <p> 資料庫中<span style="text-decoration: rgb(255,127,80)  underline;">「{{tw_data_lastTtext}}」</span> ;&nbsp;&nbsp;
+                                <span style="text-decoration: rgb(255,127,80)  underline;">「{{fred_data_lastTtext}}」</span>。</p>
+
+          <hr>
+
+          <p class="mb-3">請填選預測所需之參數</p>
+
+            <form class="center" action="" method="post">
+            {% csrf_token %}
+
+              <div class="row">
+                          <p class="mb-2 center">
+                                                            <svg class="bi me-2 ms-2 " width="18" height="18" fill="rgb(255,127,80)"><use xlink:href="#Flag fill"></use></svg>
+
+                            主預測部分</p>
+
+                          <div class="col-sm-4">
+                        {{ search_form.forecast_year|as_crispy_field }} <!-- 表單的部分 |後為過濾器 --> {# 過濾器變量名|過濾器:參數 #}
+                              </div>
+                        <div class="col-sm-4">
+                        {{ search_form.forecast_month|as_crispy_field }}
+              </div>
+                  <div class="col-sm-4">
+                        {{ search_form.forecast_H|as_crispy_field }}
+              </div>
+              </div>
+
+              <div class="row ">
+                      <p class="mb-2 center">
+                                                        <svg class="bi me-2 ms-2 " width="18" height="18" fill="rgb(255,127,80)"><use xlink:href="#Flag"></use></svg>
+
+                    對照組部分</p>
+
+                    <div class="col-sm-7">
+                    {{ search_form.forecast_H2|as_crispy_field }}
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="mb-2 d-flex justify-content-center">
+                      {% for message in messages %}
+
+                <div role="alert" class=" f02 fw-ligh alert alert-warning mx-3" style="margin-bottom: 0rem ;padding: 0.7rem 0.7rem">
+                    {{message}}
+                </div>
+    <br>
+            {% endfor %}
+                    <button type="submit" class="btn btn-outline-primary" >運算</button>
+                            </div>
+              </div>
+
+
+            </form>
+ <div class="mt-2 mb-4 py-3 px-4 center  peach_puff">
+                  <p>
+                         <mark>
+                            [ 補充說明 1 ]
+                             <b>進口與出口各自將會有8條估計結果(共計16條)。</b>
+                        </mark></p><p>
+                       ( 由於解釋變數依照「是否使用到 Fred 資料」以及「是使用 level 值還是 growth rate」，劃分成4種，故此部分每次預測會有4條估計結果，並加上對照組共計8條估計結果。)
+                     </p>
+
+                    {% if forecast_from %}
+                    <p><br>
+                         <mark>
+
+                    [ 補充說明 2 ]  <b>下方會呈現選擇{{forecast_year}}年{{forecast_month}}月開始{{H}}期之預測結果，並以往前推{{H2}}期作為對照組。</b>
+                        </mark>
+
+                     </p>
+                    {% endif %}
+                    {% if forecast_from > tw_data_last %}
+
+                    <p><br>
+                         <mark>
+
+                    [ 補充說明 3 ]  <b>下方僅呈現目前最新可開始預測之結果。</b>
+                        </mark>
+                        ( 因為欲開始預測的時間，超出樣本時間點1期以上 )
+                     </p>
+                    {% endif %}
+
+
+
+                </div>
+    </div>
+    </div>
+
+
+        </div>
+
+    {% if TradeDash_f %}
+        <br>
+        <div class="mt-1 mb-1 pt-2 wheat" style="
+            position: relative;
+            padding-bottom: 100%;
+            height:2600px;
+            padding: 20px;
+            overflow:auto;
+
+            " >
+
+          <iframe src="/django_plotly_dash/app/TradeDash_f/" style="
+            position: absolute;
+            top: 0;
+            left: 5%;
+            width: 90%;
+            height: 100%;"</iframe>
+        </div>
+    {% endif %}
+{% endblock content %}
+

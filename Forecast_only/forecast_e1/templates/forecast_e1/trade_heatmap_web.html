@@ -1,0 +1,88 @@
+{% extends 'base1_2_2.html' %} {# 啟用父模板，繼承的概念 #}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load plotly_dash %}
+<head>
+<link rel="stylesheet"  href="{% static '/css/freestyle.css' %}">
+{% block title %}
+進出口預測之係數
+{% endblock title %}  <!-- 配上 base 定義的固定 title 格式 -->
+     </head>
+{% block content %}
+
+
+            <div class=" d-flex justify-content-center">
+                 <h1 class="f02 fw-light " >{{ text_title }}</h1>
+            </div>
+
+
+
+<div >
+<br>
+<br>
+<div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">查看進出口預測的重要變數</h4>
+          <p>此部分在按下運算後，會直接開始用各個變數組合來估計最新可以預測之進出口，預測結束將會提供迴歸係數熱力圖之選單與圖形。</p>
+          <hr>
+
+                  <div class="mb-2 d-flex justify-content-center">
+                      {% for message in messages %}
+
+                <div role="alert" class=" f02 fw-ligh alert alert-warning mx-3" style="margin-bottom: 0rem ;padding: 0.7rem 0.7rem">
+                    {{message}}
+                </div>
+    <br>
+            {% endfor %}
+                      <form class="center" action="" method="post">
+                          {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-primary" >開始運算</button>
+                          </form>
+                            </div>
+<br>
+             <div class="mt-2 mb-4 py-3 px-4 center  peach_puff">
+                    <p>
+                         <mark>
+                            [ 補充說明 1 ]
+                             <b>進口與出口各自將會有4條估計結果(共計8條)。</b>
+                        </mark></p><p>
+                       ( 由於解釋變數依照「是否使用到 Fred 資料」以及「是使用 level 值還是 growth rate」，劃分成4種，故預測會有4條估計結果。)
+                     </p>
+                                     <p><br>
+                         <mark>
+
+                    [ 補充說明 2 ]  <b>會直接預測當前可做之最新預測，並預測{{H}}期。</b>
+                        </mark>
+
+                     </p><p>
+                       ( 使用最多的資料作為樣本內來預測樣本外。)
+                     </p>
+
+
+
+             </div>
+
+    </div>
+    </div>
+
+{% if TradeHeatmapDash_f %}
+<br>
+<div class="mt-1 mb-1 pt-2 " style="
+    position: relative;
+    padding-bottom: 100%;
+    height:3500px;
+    padding: 20px;
+    overflow:auto;
+    " >
+
+  <iframe src="/django_plotly_dash/app/TradeHeatmapDash_f/" style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;"</iframe>
+</div>
+
+{% endif %}
+
+{% endblock content %}
+

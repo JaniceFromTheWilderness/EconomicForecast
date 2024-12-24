@@ -1,0 +1,75 @@
+{% extends 'base1.html' %} {# 啟用父模板，繼承的概念 #}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load plotly_dash %}
+<head>
+            <link rel="stylesheet"  href="{% static '/css/freestyle.css' %}">
+{% block title %}
+進出口預測
+{% endblock title %}  <!-- 配上 base 定義的固定 title 格式 -->
+        </head>
+{% block content %}
+        <div class="ui secondary  menu">
+            <br>
+            <h1 class="f02 fw-light" >進出口預測</h1>
+
+        </div>
+
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <div class="row row-cols-auto">
+          <div class="col">
+            {{ search_form.forecast_year|as_crispy_field }} <!-- 表單的部分 |後為過濾器 --> {# 過濾器變量名|過濾器:參數 #}
+          </div>
+          <div class="col">
+            {{ search_form.forecast_month|as_crispy_field }}
+          </div>
+          <div class="col">
+            {{ search_form.forecast_H|as_crispy_field }}
+          </div>
+
+          <div class="col">
+            <button  class=" btn btn-primary mt-4  " type="submit">查詢</button>
+          </div>
+        </div>
+    </form>
+    {% for message in messages %}
+    <div role="alert" class=" alert alert-warning">
+        {{message}}
+    </div>
+    {% endfor %}
+        <div class="mt-2 mb-4 pt-2 pb-2 ps-2 pe-2 card peach_puff">
+
+        <p>資料庫中{{tw_data_lastTtext}};&nbsp;&nbsp;{{fred_data_lastTtext}}</p>
+        {% if request.method == 'POST' %} <!-- 如果預測存在，則出現以下內容 -->
+            {% if forecast_from > tw_data_last %}
+                <u>
+                [補充說明]  僅呈現目前最新可開始預測之結果 (因為欲開始預測的時間，超出樣本時間點1期以上)
+
+                </u>
+            {% endif %}
+        {% endif %}
+            </div>
+            {% if TradeDash %}
+                <br>
+                <div class="mt-1 mb-1 pt-2 " style="
+                    position: relative;
+                    padding-bottom: 100%;
+                    height:2600px;
+                    padding: 20px;
+                    overflow:auto;
+                    " >
+
+                  <iframe src="/django_plotly_dash/app/TradeDash/" style="
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;"</iframe>
+                </div>
+
+        {% endif %}
+{% endblock content %}

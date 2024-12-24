@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load static %} <!-- Instruct Django to load static files -->
+<STYLE>
+
+</STYLE>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <!-- 這一段 code 將頁面連結到樣式表~~ 以連結方式引用static資料夾中的css檔案-->
+        <link rel="stylesheet"  href="{% static '/css/freestyle.css' %}">
+        <link rel="stylesheet" href="{% static 'bootstrap-5.2.2-dist/css/bootstrap.css' %}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/1.11.8/semantic.min.css"/>
+
+        <title>中研院經濟預測 | 首頁</title>
+    </head>
+
+    <body class="LightYellow">
+
+
+  <section class="py-5 container">
+    <div class="row py-lg-5">
+      <div class="col-lg-0 mx-auto px-0">
+
+        <h1 class="f0 display-4  fst-normal">經濟資料分析網頁化</h1>
+        <div class="px-5 container" >
+          <p class="f03   mb-1 lead text-muted">
+            結合資料科學與網頁開發, 藉由網頁中點選選項, </p>
+         <p class="f03  mb-0 lead text-muted">
+            達到即時資料處理、運算與分析, 並呈現可互動式圖形結果。</p>
+      </div>
+
+    </div></div>
+
+  </section>
+
+
+
+
+    <div class="album py-5 blue-yellow ">
+
+        <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2  row-cols-md-3  ">
+        <div class="col" style="height:550px">
+            <div class="card shadow-sm" style="height:520px">
+                <div class="elementor-element elementor-element-escayri elementor-widget elementor-widget-image" data-id="escayri" data-element_type="widget" data-widget_type="image.default">
+				    <div class="elementor-widget-container">
+                        <div class="elementor-image" >
+                            <img decoding="async" width="100%"   height="300"  margin="auto" src="{% static 'forecast_e1/images/進出口.png' %}" style="object-fit: scale-down;opacity: 0.4;" alt="" loading="lazy">
+                        </div>
+                    </div>
+				</div>
+            <div class="card-body" >
+                 <div class="text-center">
+                     <h3 class="f02   fw-bolder">進出口即時預測</h3>
+
+                 </div>
+                <Br>
+                <p class="card-text">透過下拉式選單取得欲預測的期數、年月份，以及選項式選單選擇進口還是出口，以得到對應之可互動式預測圖形。(背後包含了網路爬蟲資料、邏輯運算...)</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <a href="{% url '預測進出口_f' %}"  class="icon-link">進入分析</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+                  <div class="col" style="height:550px">
+            <div class="card shadow-sm" style="height:520px">
+                <div class="elementor-element elementor-element-escayri elementor-widget elementor-widget-image" data-id="escayri" data-element_type="widget" data-widget_type="image.default">
+				    <div class="elementor-widget-container">
+                        <div class="elementor-image" >
+                            <img decoding="async" width="100%"   height="300"  margin="auto" src="{% static 'forecast_e1/images/進出口預測之迴歸係數.png' %}" style="object-fit: scale-down;opacity: 0.4;" alt="" loading="lazy">
+                        </div>
+                    </div>
+				</div>
+            <div class="card-body" >
+                 <div class="text-center">
+                     <h3 class="f02   fw-bolder">進出口即時預測之係數</h3>
+
+                 </div>
+                <Br>
+                <p class="card-text">透過熱力圖呈現不同預測期數之出口/進口與潛在預測變數關聯性(迴歸係數)的變化。</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                      <a href="{% url '係數熱力地圖' %}"  class="icon-link">進入分析</a>
+                  </div>
+            </div>
+          </div>
+        </div>
+
+                  <div class="col" style="height:550px">
+          <div class="card shadow-sm" style="height:520px">
+            <div class="elementor-element elementor-element-escayri elementor-widget elementor-widget-image" data-id="escayri" data-element_type="widget" data-widget_type="image.default">
+                <div class="elementor-widget-container">
+                    <div class="elementor-image">
+                        <img decoding="async" width="100%"   height="300"  margin="auto"  src="{% static 'forecast_e1/images/堆疊圖C.png' %}" style="object-fit: scale-down;opacity: 0.4;" alt="" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                 <div class="text-center">
+                     <h3 class="f02    fw-bolder">經濟預測即時分析</h3>
+
+                 </div>
+                 <Br>
+                <p class="card-text">透過折線圖與貢獻率了解 GDP 組成與成長變化，以及各組成對於 GDP 之重要性的改變。(背後多包含了與 Eviews 的結合...)</p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <a href="{% url '經濟預測' %}"  class="icon-link">進入分析</a>
+                </div>
+            </div>
+          </div>
+        </div>
+          </div>
+
+
+        </div>
+    </div>
+
+    <footer class="text-muted py-5">
+      <div class="container">
+        <p class="float-end mb-1">
+          <a href="#">Back to top</a>
+        </p>
+        <p class="mb-1">以上為範例供參考!</p>
+
+
+      </div>
+    </footer>
+
+    </body>
+
+</html>
+
+
+

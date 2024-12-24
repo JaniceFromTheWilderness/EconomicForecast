@@ -1,0 +1,96 @@
+{% extends 'base1_2_2.html' %} {# 啟用父模板，繼承的概念 #}
+{% load static %}
+{% load crispy_forms_tags %}
+{% load plotly_dash %}
+<head>
+<link rel="stylesheet"  href="{% static '/css/freestyle.css' %}">
+{% block title %}
+GDP組成
+{% endblock title %}  <!-- 配上 base 定義的固定 title 格式 -->
+     </head>
+{% block content %}
+
+            <div class=" d-flex justify-content-center">
+                 <h1 class="f02 fw-light " >{{ text_title }}</h1>
+            </div>
+
+
+<div >
+<br>
+<br>
+<div class="alert alert-success" role="alert">
+          <h4 class="alert-heading">觀察經濟成長主要貢獻來源</h4>
+          <p>此部分已將 Eviews 納入 Python 作業系統，並加入進出口預測與其結果，以提高方便性與整合性。</p>
+          <hr>
+
+          <p class="mb-3">選擇欲加入之進口與出口預測的解釋變數分別之狀態:</p>
+
+            <form class="center" action="" method="post">
+            {% csrf_token %}
+
+              <div class="row">
+                          <p class="mb-2 center">
+                              <svg class="bi me-2 ms-2 " width="18" height="18" fill="rgb(255,127,80)"><use xlink:href="#1 square fill"></use></svg>
+                            進口部分</p>
+
+                          <div class="col ">
+                        {{ search_form.withFred_c1|as_crispy_field }} <!-- 表單的部分 |後為過濾器 --> {# 過濾器變量名|過濾器:參數 #}
+                              </div>
+                        <div class="col">
+                        {{ search_form.state_c1|as_crispy_field }}
+              </div>
+              </div>
+
+              <div class="row">
+                      <p class="mb-2 center">
+                                                <svg class="bi me-2 ms-2 " width="18" height="18" fill="rgb(255,127,80)"><use xlink:href="#2 square fill"></use></svg>
+                    出口部分</p>
+                   <div class="col">
+                    {{ search_form.withFred_c2|as_crispy_field }} <!-- 表單的部分 |後為過濾器 --> {# 過濾器變量名|過濾器:參數 #}
+                          </div>
+                    <div class="col">
+                    {{ search_form.state_c2|as_crispy_field }}
+                  </div>
+              </div>
+
+              <div class="row">
+                  <div class="mb-2 d-flex justify-content-center">
+                      {% for message in messages %}
+
+                <div role="alert" class=" f02 fw-ligh alert alert-warning mx-3" style="margin-bottom: 0rem ;padding: 0.7rem 0.7rem">
+                    {{message}}
+                </div>
+    <br>
+            {% endfor %}
+                    <button type="submit" class="btn btn-outline-primary" >運算</button>
+                            </div>
+              </div>
+
+
+            </form>
+
+
+    </div>
+    </div>
+
+{% if GDPyoy %}
+<br>
+<div class="mt-1 mb-1 pt-2 " style="
+    position: relative;
+    padding-bottom: 100%;
+    height:2600px;
+    padding: 20px;
+    overflow:auto;
+    " >
+
+  <iframe src="/django_plotly_dash/app/GDPyoy/" style="
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;"</iframe>
+</div>
+
+{% endif %}
+
+{% endblock content %}
